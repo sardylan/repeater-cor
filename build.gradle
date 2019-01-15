@@ -1,0 +1,36 @@
+plugins {
+    id "groovy"
+    id "java"
+    id "application"
+    id "com.github.johnrengelman.shadow" version "4.0.3"
+}
+
+group "org.thehellnet.ham.repeater"
+version "0.0.0"
+
+shadowJar.archiveFileName = "repeater-cor.jar"
+mainClassName = "org.thehellnet.ham.repeater.cor.RepeaterCor"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile group: "org.codehaus.groovy", name: "groovy-all", version: "2.5.5"
+
+    compile group: "org.slf4j", name: "slf4j-api", version: "1.7.25"
+    compile group: "org.slf4j", name: "jul-to-slf4j", version: "1.7.25"
+    compile group: "org.slf4j", name: "jcl-over-slf4j", version: "1.7.25"
+    compile group: "org.slf4j", name: "log4j-over-slf4j", version: "1.7.25"
+
+    compile group: "ch.qos.logback", name: "logback-core", version: "1.2.3"
+    compile group: "ch.qos.logback", name: "logback-classic", version: "1.2.3"
+
+    compile group: "com.pi4j", name: "pi4j-core", version: "1.1"
+
+    testCompile group: "org.spockframework", name: "spock-core", version: "1.2-groovy-2.5"
+}
