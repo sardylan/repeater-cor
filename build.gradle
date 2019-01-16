@@ -31,6 +31,7 @@ dependencies {
     compile group: "ch.qos.logback", name: "logback-classic", version: "1.2.3"
 
     compile group: "com.pi4j", name: "pi4j-core", version: "1.1"
+    compile group: "joda-time", name: "joda-time", version: "2.10.1"
 
     testCompile group: "org.spockframework", name: "spock-core", version: "1.2-groovy-2.5"
 }
